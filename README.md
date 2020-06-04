@@ -23,7 +23,7 @@
 
 git pull		更新本地仓库的最新改动
 
-
+git fetch origin	
 
 git status		检查当前文件状态
 git status -s	缩短状态命令的输出
@@ -34,11 +34,12 @@ git checkout master		切换回主分支
 git branch -d <branch name>		删除这个分支
 
 
-git add <filename>			提交指定文件到->暂存区
+git add <filename>			添加指定文件到->暂存区
 git add [file/files/path]
-git add -A  				提交所有变化 git add --ALL
-git add -u  				提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
-git add .   				提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+git add -A  				添加所有变化 git add --ALL
+git add -u  				添加被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add .   				添加新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+git add -i					交互式添加文件到暂存区
 
 git rm <filename>			删除暂存区文件
 git rm [file/files/path]	例如 git rm build\*~  删除所有名字以 ~ 结尾的文件
@@ -59,13 +60,15 @@ git diff --cached 	查看已经暂存起来的变化（ --staged 和 --cached �
 git log					查看本地仓库的历史记录（q退出）
 git log --name-status	查看哪些文件改变了
 git log --graph --oneline --decorate --all	通过 ASCII 艺术的树形结构来展示所有的分支, 每个分支都标示了他的名字和标签:
-
+git log --help			帮助
 
 git mv fileOld fileNew	修改 fileOld 文件名 为 fileNew
 
 
 vim .gitignore		编辑 git 忽略文件
 cat .gitignore		查看 git 忽略文件
+
+git config format.pretty oneline	显示历史记录时，每个提交的信息只显示一行
 
 
 
