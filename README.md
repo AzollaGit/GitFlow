@@ -14,3 +14,5 @@
 	git remote add origin https://github.com/AzollaGit/GitFlow.git
 	git push -u origin master
 }
+
+# Git 指令集：
