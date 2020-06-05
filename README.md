@@ -19,6 +19,10 @@
 
 1、每次准备提交前，先用 git status 看下，所用文件是不是都 git add 了， 然后再运行提交命令 git commit 
 
+2、 参考文章：[Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并](https://github.com/selfteaching/the-craft-of-selfteaching/issues/67)
+
+3、 与原仓库同步：比如esp-dif； git remote add espressif https://github.com/espressif/esp-idf.git
+	
 # Git 指令集：
 
 git pull		更新本地仓库的最新改动
@@ -76,6 +80,8 @@ vim .gitignore		编辑 git 忽略文件
 cat .gitignore		查看 git 忽略文件
 
 git config format.pretty oneline	显示历史记录时，每个提交的信息只显示一行
+
+
 
 
 
