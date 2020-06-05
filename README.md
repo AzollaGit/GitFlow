@@ -28,11 +28,15 @@ git fetch origin
 git status		检查当前文件状态
 git status -s	缩短状态命令的输出
 
-git checkout -b <branch name>		创建分支名，并切换到改分支
-git checkout master		切换回主分支
+git checkout -b <new branch>		创建新分支，并切换到改分支
+git checkout master					切换回主分支
+git checkout master^				引用；切换到 master 的父节点
+git checkout <filename>				从分支中分离HEAD，执行该文件。
+git checkout HEAD~3					向上移动 3 级父提交
 
-git branch -d <branch name>		删除这个分支
-
+git branch <new branch>				创建新分支
+git branch -d <new branch>			删除这个分支
+git branch -f master HEAD~3			将 master 分支强制指向 HEAD 的第 3 级父提交
 
 git add <filename>			添加指定文件到->暂存区
 git add [file/files/path]
@@ -48,6 +52,9 @@ git rm --cached				让文件保留在磁盘，但是并不让 Git 继续跟踪�
 
 git commit -m "代码提交信息"		提交到->HEAD
 git commit -a -m "代码提交信息"		跳过 git add 进行提交
+
+git merge <branchName>		合并分支
+git rebase <branchName>		合并分支;具有开发线性记录
 
 git remote add origin <server>		链接远程仓库
 git push origin master				推送主分支到远端仓库; 
